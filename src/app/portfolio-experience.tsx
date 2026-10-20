@@ -3,7 +3,6 @@
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
-const assetPath = (path: string) => `/random-hours${path}`;
 
 type Scene = "hello" | "work" | "about" | "contact";
 type Category =
@@ -370,8 +369,8 @@ export default function PortfolioExperience() {
             <button className="scene-action" type="button" onClick={() => goToScene("work")}>Explore selected work <span aria-hidden="true">↗</span></button>
           </div>
           <button className="intro-frame" type="button" onClick={() => { setSelectedProject(projects[0]); }} aria-label="Open the GAMBLE project details">
-            <Image src="/work/ganpati-visarjan.webp" alt="A night frame from Ganpati Visarjan in Mumbai" width={639} height={746} priority sizes="(max-width: 720px) 88vw, 46vw" />
-            <span className="intro-frame-caption">Ganpati Visarjan · Mumbai</span>
+            <Image src="/work/gamble-music-video.webp" alt="Gamble Music Video Thumbnail" width={639} height={746} priority sizes="(max-width: 720px) 88vw, 46vw" />
+            <span className="intro-frame-caption">Gamble Music Video</span>
             <span className="intro-frame-open" aria-hidden="true">↗</span>
           </button>
           <p className="intro-disciplines">Cinematography <span>·</span> Photography <span>·</span> Film editing</p>
@@ -472,7 +471,7 @@ export default function PortfolioExperience() {
           <article className="project-dialog" role="dialog" aria-modal="true" aria-labelledby="project-dialog-title" onClick={(event) => event.stopPropagation()}>
             <button className="project-dialog-close" type="button" autoFocus onClick={() => setSelectedProject(null)} aria-label="Close project details">Close <span aria-hidden="true">×</span></button>
             <div className="project-dialog-image">
-              <Image src={assetPath(selectedProject.image)} alt={selectedProject.alt} width={800} height={1100} sizes="(max-width: 720px) 90vw, 55vw" />
+              <Image src={selectedProject.image} alt={selectedProject.alt} width={800} height={1100} sizes="(max-width: 720px) 90vw, 55vw" />
             </div>
             <div className="project-dialog-copy">
               <p className="scene-kicker">{selectedProject.category}</p>
