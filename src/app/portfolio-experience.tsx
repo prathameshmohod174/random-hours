@@ -3,6 +3,8 @@
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
+const assetPath = (path: string) => `/random-hours${path}`;
+
 type Scene = "hello" | "work" | "about" | "contact";
 type Category =
   | "All work"
@@ -470,7 +472,7 @@ export default function PortfolioExperience() {
           <article className="project-dialog" role="dialog" aria-modal="true" aria-labelledby="project-dialog-title" onClick={(event) => event.stopPropagation()}>
             <button className="project-dialog-close" type="button" autoFocus onClick={() => setSelectedProject(null)} aria-label="Close project details">Close <span aria-hidden="true">×</span></button>
             <div className="project-dialog-image">
-              <Image src={selectedProject.image} alt={selectedProject.alt} width={800} height={1100} sizes="(max-width: 720px) 90vw, 55vw" />
+              <Image src={assetPath(selectedProject.image)} alt={selectedProject.alt} width={800} height={1100} sizes="(max-width: 720px) 90vw, 55vw" />
             </div>
             <div className="project-dialog-copy">
               <p className="scene-kicker">{selectedProject.category}</p>
