@@ -369,7 +369,7 @@ export default function PortfolioExperience() {
             <button className="scene-action" type="button" onClick={() => goToScene("work")}>Explore selected work <span aria-hidden="true">↗</span></button>
           </div>
           <button className="intro-frame" type="button" onClick={() => { setSelectedProject(projects[0]); }} aria-label="Open the GAMBLE project details">
-            <Image src="/work/gamble-music-video.webp" alt="Gamble Music Video Thumbnail" width={639} height={746} priority sizes="(max-width: 720px) 88vw, 46vw" />
+            <Image src="/work/gamble-music-video.jpg" alt="Gamble Music Video Thumbnail" width={639} height={746} priority sizes="(max-width: 720px) 88vw, 46vw" />
             <span className="intro-frame-caption">Gamble Music Video</span>
             <span className="intro-frame-open" aria-hidden="true">↗</span>
           </button>
